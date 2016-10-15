@@ -15,7 +15,7 @@ use Doctrine\Common\Collections\Collection;
 use PhpSpec\ObjectBehavior;
 use Sylius\Component\Archetype\Model\ArchetypeInterface;
 use Sylius\Component\Attribute\Model\AttributeInterface;
-use Sylius\Component\Variation\Model\OptionInterface;
+use Sylius\Component\Product\Model\ProductOptionInterface;
 
 /**
  * @author Adam Elsodaney <adam.elso@gmail.com>
@@ -97,13 +97,13 @@ final class ArchetypeSpec extends ObjectBehavior
         $this->getOptions()->shouldReturn($attributes);
     }
 
-    function it_adds_option(OptionInterface $attribute)
+    function it_adds_option(ProductOptionInterface $attribute)
     {
         $this->addOption($attribute);
         $this->hasOption($attribute)->shouldReturn(true);
     }
 
-    function it_removes_option(OptionInterface $attribute)
+    function it_removes_option(ProductOptionInterface $attribute)
     {
         $this->addOption($attribute);
         $this->hasOption($attribute)->shouldReturn(true);

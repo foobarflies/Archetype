@@ -11,8 +11,7 @@
 
 namespace Sylius\Component\Archetype\Model;
 
-use Sylius\Component\Attribute\Model\AttributeSubjectInterface;
-use Sylius\Component\Variation\Model\VariableInterface;
+use Sylius\Component\Product\Model\ProductInterface;
 
 /**
  * The class that is the result of copies made from an archetype, should
@@ -20,7 +19,7 @@ use Sylius\Component\Variation\Model\VariableInterface;
  *
  * @author Adam Elsodaney <adam.elso@gmail.com>
  */
-interface ArchetypeSubjectInterface extends AttributeSubjectInterface, VariableInterface
+interface ArchetypeSubjectInterface extends ProductInterface
 {
     /**
      * @return null|ArchetypeInterface

@@ -14,9 +14,9 @@ namespace Sylius\Component\Archetype\Model;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Attribute\Model\AttributeInterface;
+use Sylius\Component\Product\Model\ProductOptionInterface;
 use Sylius\Component\Resource\Model\TimestampableTrait;
 use Sylius\Component\Resource\Model\TranslatableTrait;
-use Sylius\Component\Variation\Model\OptionInterface;
 
 /**
  * The archetype model.
@@ -48,7 +48,7 @@ class Archetype implements ArchetypeInterface
     protected $attributes;
 
     /**
-     * @var Collection|OptionInterface[]
+     * @var Collection|ProductOptionInterface[]
      */
     protected $options;
 
@@ -167,7 +167,7 @@ class Archetype implements ArchetypeInterface
     /**
      * {@inheritdoc}
      */
-    public function addOption(OptionInterface $option)
+    public function addOption(ProductOptionInterface $option)
     {
         $this->options->add($option);
     }
@@ -175,7 +175,7 @@ class Archetype implements ArchetypeInterface
     /**
      * {@inheritdoc}
      */
-    public function removeOption(OptionInterface $option)
+    public function removeOption(ProductOptionInterface $option)
     {
         $this->options->removeElement($option);
     }
@@ -183,7 +183,7 @@ class Archetype implements ArchetypeInterface
     /**
      * {@inheritdoc}
      */
-    public function hasOption(OptionInterface $option)
+    public function hasOption(ProductOptionInterface $option)
     {
         return $this->options->contains($option);
     }

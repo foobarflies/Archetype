@@ -13,10 +13,10 @@ namespace Sylius\Component\Archetype\Model;
 
 use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Attribute\Model\AttributeInterface;
+use Sylius\Component\Product\Model\ProductOptionInterface;
 use Sylius\Component\Resource\Model\CodeAwareInterface;
 use Sylius\Component\Resource\Model\TimestampableInterface;
 use Sylius\Component\Resource\Model\TranslatableInterface;
-use Sylius\Component\Variation\Model\OptionInterface;
 
 /**
  * The archetype defines the template for new objects to be created from
@@ -70,37 +70,37 @@ interface ArchetypeInterface extends
     /**
      * Returns all prototype options.
      *
-     * @return Collection|OptionInterface[]
+     * @return Collection|ProductOptionInterface[]
      */
     public function getOptions();
 
     /**
      * Sets all prototype options.
      *
-     * @param Collection|OptionInterface[] $options
+     * @param Collection|ProductOptionInterface[] $options
      */
     public function setOptions(Collection $options);
 
     /**
-     * @param OptionInterface $option
+     * @param ProductOptionInterface $option
      */
-    public function addOption(OptionInterface $option);
+    public function addOption(ProductOptionInterface $option);
 
     /**
      * Removes option from prototype.
      *
-     * @param OptionInterface $option
+     * @param ProductOptionInterface $option
      */
-    public function removeOption(OptionInterface $option);
+    public function removeOption(ProductOptionInterface $option);
 
     /**
      * Checks whether prototype has given option.
      *
-     * @param OptionInterface $option
+     * @param ProductOptionInterface $option
      *
      * @return bool
      */
-    public function hasOption(OptionInterface $option);
+    public function hasOption(ProductOptionInterface $option);
 
     /**
      * @return bool

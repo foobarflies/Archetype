@@ -18,8 +18,8 @@ use Sylius\Component\Archetype\Model\ArchetypeInterface;
 use Sylius\Component\Archetype\Model\ArchetypeSubjectInterface;
 use Sylius\Component\Attribute\Model\AttributeInterface;
 use Sylius\Component\Attribute\Model\AttributeValueInterface;
+use Sylius\Component\Product\Model\ProductOptionInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;
-use Sylius\Component\Variation\Model\OptionInterface;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
@@ -58,7 +58,7 @@ final class ArchetypeBuilderSpec extends ObjectBehavior
         ArchetypeSubjectInterface $subject,
         AttributeInterface $attribute,
         AttributeValueInterface $attributeValue,
-        OptionInterface $option
+        ProductOptionInterface $option
     ) {
         $archetype->getAttributes()->willReturn([$attribute])->shouldBeCalled();
         $archetype->getOptions()->willReturn([$option])->shouldBeCalled();
@@ -82,7 +82,7 @@ final class ArchetypeBuilderSpec extends ObjectBehavior
         ArchetypeSubjectInterface $subject,
         AttributeInterface $attribute,
         AttributeValueInterface $attributeValue,
-        OptionInterface $option
+        ProductOptionInterface $option
     ) {
         $archetype->getAttributes()->willReturn([$attribute])->shouldBeCalled();
         $archetype->getOptions()->willReturn([$option])->shouldBeCalled();

@@ -15,8 +15,8 @@ use Sylius\Component\Archetype\Model\ArchetypeInterface;
 use Sylius\Component\Archetype\Model\ArchetypeSubjectInterface;
 use Sylius\Component\Attribute\Model\AttributeSubjectInterface;
 use Sylius\Component\Attribute\Model\AttributeValueInterface;
+use Sylius\Component\Product\Model\ProductInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;
-use Sylius\Component\Variation\Model\VariableInterface;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
@@ -75,7 +75,7 @@ class ArchetypeBuilder implements ArchetypeBuilderInterface
      * @param ArchetypeInterface $archetype
      * @param VariableInterface  $subject
      */
-    private function createAndAssignOptions(ArchetypeInterface $archetype, VariableInterface $subject)
+    private function createAndAssignOptions(ArchetypeInterface $archetype, ProductInterface $subject)
     {
         foreach ($archetype->getOptions() as $option) {
             $subject->addOption($option);
