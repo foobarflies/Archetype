@@ -217,7 +217,7 @@ class Archetype implements ArchetypeInterface
      */
     public function getName()
     {
-        return $this->translate()->getName();
+        return $this->getTranslation()->getName();
     }
 
     /**
@@ -225,7 +225,7 @@ class Archetype implements ArchetypeInterface
      */
     public function setName($name)
     {
-        $this->translate()->setName($name);
+        $this->getTranslation()->setName($name);
     }
 
     /**
