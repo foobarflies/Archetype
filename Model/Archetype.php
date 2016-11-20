@@ -227,4 +227,12 @@ class Archetype implements ArchetypeInterface
     {
         $this->translate()->setName($name);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function createTranslation()
+    {
+        return new ArchetypeTranslation();
+    }
 }
